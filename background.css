@@ -1,0 +1,143 @@
+/* normalise CSS 
+브라우저 호환성을 위해 챙겨두는 css 적용값*/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.mainBackground {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 1px;
+  background-image: url(/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  /* 필터는 안에 글씨 있으면 거기에도 적용이 된다.
+  filter: brightness(70%); */
+}
+.mainTitle {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  /* margin collaspe: 테투리가 붙으면 그 상위 요소에도 margin이 적용된다. 해결책 => 박스에 padding을 줘서 테두리 떨어뜨리기 */
+  margin: 30px 30px 10px 30px;
+}
+.mainContent {
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  font-size: 18px;
+  margin: 20px 40px 5px 40px;
+}
+.mainBtn {
+  /* position: absolute 가운데 정렬
+  left: 0, right: 0, margin: auto, width: 적절히 주기*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  padding: 5px 10px 5px 10px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.descriptionBox {
+  width: 60%;
+  max-width: 700px;
+  min-width: 400px;
+  height: 170px;
+  position: relative;
+  top: -60px;
+  margin: auto auto 10px auto;
+  /* 아래에도 박스를 주고 싶으면 relative쓰는게 나을지도
+  position: absolute;
+  top: 450px;
+  left: 0;
+  right: 0;
+  margin: auto; */
+  padding: 20px;
+  background-color: #eee;
+  text-align: center;
+}
+.descTitle {
+  margin: 0;
+  font-size: 20px;
+}
+/* form */
+.formContainer {
+  margin: auto;
+  background-color: #eee;
+  width: 30%;
+  max-width: 315px;
+  min-width: 315px;
+  height: 380px;
+  border-radius: 10px;
+}
+.formContainer h4 {
+  font-size: 22px;
+  padding: 20px 0 20px 33px;
+  margin: 0;
+}
+#contact {
+  padding: 0px 40px;
+}
+#contact p {
+  font-size: 14px;
+  margin: 0px;
+}
+input[type='email'] {
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 15px 0;
+}
+input[type='text'] {
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 15px 0;
+}
+.formFirstName {
+  width: 50%;
+  float: left;
+  padding-right: 5px;
+}
+.formLastName {
+  width: 50%;
+  float: left;
+}
+#formMessageText {
+  width: 100%;
+  margin: 5px 0 15px 0;
+}
+.formSubscrib {
+  float: left;
+}
+input[type='checkbox'] {
+  margin: 0;
+  vertical-align: middle;
+}
+/* .formSubscrib span {
+  font-size: 12px;
+  vertical-align: middle;
+} */
+.formSubscrib label {
+  font-size: 12px;
+  vertical-align: middle;
+}
+input[type='submit'] {
+  float: right;
+  padding: 5px 10px;
+  background-color: orange;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+}
