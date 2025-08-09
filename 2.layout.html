@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout using float</title>
+    <link rel="stylesheet" href="/css/layout.css" />
+  </head>
+  <body>
+    <!-- How to layout
+     1. Float => 문제해결: clear: both
+     2. inline-block + font-size: 0(parent element) => 문제해결: vertical-align: top
+      -->
+    <div class="container" style="font-size: 0">
+      <div class="header"></div>
+      <div class="sideBar"></div>
+      <div class="main"></div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
