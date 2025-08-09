@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  font-family: fantasy;
+}
+img {
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  /* margin: auto 사용해서 가운데 정렬하기 */
+  display: block;
+  margin: auto;
+}
+h1 {
+  letter-spacing: 5px;
+}
+.introBox {
+  display: inline-block;
+  background-color: palevioletred;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
