@@ -1,4 +1,4 @@
-# Learning-HTML-CSS-Aug-2025
+# Learning-HTML-CSS-Aug-2025🍎
 
 ## 📌 Introduction
 Learning and practicing HTML and CSS through [codingApple](https://codingapple.com) online lectures.  
