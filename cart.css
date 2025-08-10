@@ -1,0 +1,85 @@
+/* Table
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+}
+*/
+* {
+  font-family: monospace;
+}
+.tableBg {
+  width: 80%;
+  max-width: 1000px;
+  min-width: 800px;
+  margin: auto;
+  padding: 50px;
+  background-color: lightblue;
+}
+.tableBg h3 {
+  margin-top: 0;
+  font-size: 32px;
+}
+.cart {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 10px;
+  border-collapse: collapse;
+  font-size: 18px;
+  background-color: white;
+}
+.cart thead th,
+.cart tbody td {
+  border-bottom: 1px solid black;
+  padding: 0.5em;
+}
+img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+.cart tbody h4 {
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+.cart tbody p {
+  margin-top: 5px;
+}
+.cart tbody tr :nth-child(3),
+.cart tbody tr :nth-child(4),
+.cart tbody tr :nth-child(5),
+.cart tfoot tr :nth-child(1) {
+  text-align: right;
+}
+.cart tfoot td {
+  padding: 1em;
+}
+.cartLink {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.cartLink:link {
+  color: cornflowerblue;
+}
+.cartLink:visited {
+  color: azure;
+}
+.cartBtn {
+  float: right;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: navy;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+/* Check the writing order of pseudo-class selector */
+.cartBtn:hover {
+  background-color: orange;
+}
