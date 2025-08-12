@@ -1,3 +1,10 @@
+/* custom font
+@font-face {
+  font-family: 'nanum';
+  src: url(/NanumSquareAcB.ttf);
+}
+*/
+
 /* normalise CSS 
 브라우저 호환성을 위해 챙겨두는 css 적용값*/
 * {
@@ -5,6 +12,31 @@
 }
 body {
   margin: 0;
+  font-family: 'Red Hat Text';
+  /* Anti-aliasing (for window)
+  transform: rotate(0.03deg);
+   */
+}
+.nav {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightcoral;
+  color: azure;
+}
+.nav__logo {
+  text-decoration: none;
+  font-size: 38px;
+  color: azure;
+  margin-left: 20px;
+}
+.nav__menu {
+  display: flex;
+  list-style: none;
+  font-size: 24px;
+  margin-right: 25px;
+  gap: 30px;
 }
 .mainBackground {
   position: relative;
@@ -49,6 +81,7 @@ body {
   color: black;
   cursor: pointer;
   z-index: 5;
+  transform: rotate(0.04deg);
 }
 
 .descriptionBox {
@@ -140,4 +173,33 @@ input[type='submit'] {
   border: transparent;
   border-radius: 5px;
   color: white;
+}
+/* media queary */
+@media screen and (max-width: 768px) {
+  .mainTitle {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+  .mainContent {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .mainBtn {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mainTitle {
+    font-size: 20px;
+  }
+  .mainContent {
+    font-size: 14px;
+  }
+  .mainBtn {
+    font-size: 16px;
+  }
+  .descriptionBox {
+    top: -30px;
+  }
 }
