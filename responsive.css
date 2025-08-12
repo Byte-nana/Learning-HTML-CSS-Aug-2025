@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+.prContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.prBox {
+  text-align: center;
+}
+i {
+  font-size: 40px;
+  background-color: blanchedalmond;
+  padding: 20px;
+  border-radius: 100%;
+}
+/* product display */
+.displayContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  background-color: #eee;
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+.displayImgBox {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+  /* bottom-top animation */
+  overflow: hidden;
+}
+.displayImgBox img {
+  width: 100%;
+  height: 100%;
+  /* solve issues of align, layout, overlaying etc */
+  display: block;
+}
+.displayimgoverlay {
+  /* centre <span> */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overlaybox styling */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* to hide it */
+  opacity: 0;
+  /* overlay parent box(.displayImgBox) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* animation effect */
+  transition: opacity 300ms ease-in-out;
+}
+.displayimgoverlay span {
+  font-size: 50px;
+  color: white;
+}
+.displayimgoverlay:hover {
+  opacity: 1;
+}
+/* bottom to top animation */
+.bottomToTopBox {
+  position: absolute;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  transition: all 800ms ease;
+}
+.bottomToTopBox h4 {
+  color: white;
+  font-size: 50px;
+  margin: 0;
+}
+.bottomToTopBox p {
+  color: white;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.displayImgBox:hover .bottomToTopBox {
+  transform: translateY(0%);
+}
+
+/* media queary */
+@media screen and (max-width: 768px) {
+  .prContainer {
+    /* reduce gap between .prBox */
+    max-width: 500px;
+    margin: auto;
+  }
+  .prBox {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .prContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
