@@ -2,15 +2,11 @@
   --color-primary: #4777c2;
   --color-primary-light: #6fa0e0;
   --color-primary-dark: #2b348a;
-  --color-accent-1: #ef96e6;
-  --color-accent-2: #f9c9e3;
+  --color-accent: #ef96e6;
   --color-neutral: #f4f7fb;
 
   --text-dark: #1a1a1a;
   --text-light: #f0f4f8;
-
-  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
 * {
   box-sizing: border-box;
@@ -36,11 +32,13 @@ a {
 body {
   font-family: 'Roboto';
   text-align: center;
+  background-color: var(--color-neutral);
   color: var(--text-light);
 }
 
 .container {
   width: 100%;
+  height: 100%;
 }
 /* home */
 .main__home {
@@ -48,16 +46,17 @@ body {
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
-    var(--color-accent-1) 100%
+    var(--color-accent) 100%
   );
   color: var(--text-light);
   padding: 48px 80px 0 80px;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   grid-template-rows: 1fr 1fr;
+
+  overflow: hidden;
 }
 .home__text {
-  max-width: 450px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   text-align: start;
@@ -91,7 +90,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-neutral);
   color: var(--text-dark);
 }
 .main__copy h4 {
@@ -107,8 +105,7 @@ body {
   background-color: var(--color-primary);
   padding: 48px 80px;
 }
-.main__skills h4,
-.main__service h4 {
+.main__skills h4 {
   font-size: 24px;
   margin-top: 5px;
 }
@@ -120,7 +117,6 @@ body {
 }
 .skills__item {
   width: 25%;
-  max-width: 300px;
 }
 .skills__item i {
   font-size: 32px;
@@ -138,18 +134,28 @@ body {
 }
 /* service */
 .main__service {
+  padding: 48px 0;
+}
+.service__name {
+  color: var(--text-dark);
+}
+.service__title {
+  color: var(--text-dark);
+  font-size: 24px;
+  margin-top: 5px;
 }
 .service__box {
-  width: 1000px;
+  width: 90%;
+  max-width: 1100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  margin: 40px auto;
 }
 .service__imgBox {
   position: relative;
-  height: 260px;
-  /* width: 500px;
-  height: 333px; */
+  aspect-ratio: 1.618 / 1;
+  background-color: var(--color-neutral);
 }
 .service__img {
   position: absolute;
@@ -159,9 +165,248 @@ body {
 }
 .service__imgOverlay {
   position: absolute;
-  opacity: 0.5;
   width: 100%;
   height: 100%;
-  background-color: #1a1a1a;
-  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.12);
+  padding: 48px;
+  text-align: start;
+  transition: border 300ms ease-in;
+}
+.service__imgOverlay:hover {
+  border: 25px solid var(--color-neutral);
+}
+.service__imgOverlay h4 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+.service__imgOverlay p {
+  font-size: 18px;
+}
+footer {
+  height: 100px;
+  color: var(--text-dark);
+}
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer__links a > i {
+  font-size: 32px;
+  background-color: var(--color-primary);
+  color: var(--text-light);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  padding: 10px;
+}
+.footer__name {
+  margin-top: 15px;
+}
+
+/* 1200px / 992px / 768px / 576px */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .main__home {
+    height: 100%;
+    grid-template-columns: 0.9fr 1.1fr;
+    padding: 48px 0 0 24px;
+  }
+  .home__text h3 {
+    font-size: 30px;
+  }
+  .home__text p {
+    font-size: 17px;
+  }
+  .home__btn {
+    font-size: 15px;
+  }
+  .home__img {
+    height: 350px;
+  }
+  /*  */
+  .main__copy h4 {
+    font-size: 22px;
+  }
+  .main__copy p {
+    font-size: 18px;
+  }
+  .copy__btn {
+    font-size: 14px;
+  }
+  /*  */
+  .main__skills {
+    height: 100%;
+    padding: 32px;
+  }
+  .main__skills p {
+    font-size: 15px;
+  }
+  .main__skills h4 {
+    font-size: 22px;
+  }
+  .skills__list {
+    margin: 30px 0 0 0;
+  }
+  .skills__item i {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+  }
+  .item__title {
+    font-size: 17px;
+  }
+  /*  */
+  .main__service {
+    padding: 24px;
+  }
+  .service__name {
+    font-size: 15px;
+  }
+  .service__title {
+    font-size: 22px;
+  }
+  .service__box {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .service__imgOverlay {
+    padding: 32px;
+  }
+  .service__imgOverlay:hover {
+    border: 20px solid var(--color-neutral);
+  }
+  .service__imgOverlay h4 {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .service__imgOverlay p {
+    font-size: 15px;
+  }
+  /*  */
+  .footer__links {
+    gap: 20px;
+  }
+
+  .footer__links a > i {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }
+  .footer__name {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__home {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 60px 0 60px;
+  }
+  .home__text {
+    max-width: 100%;
+    text-align: center;
+  }
+  .home__text h3 {
+    font-size: 28px;
+  }
+  .home__text p {
+    font-size: 16px;
+  }
+  .home__btn {
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+  .home__img {
+    height: 350px;
+    align-self: center;
+  }
+  /*  */
+  .main__copy {
+    height: 250px;
+  }
+  .main__copy h4 {
+    font-size: 20px;
+  }
+  .main__copy p {
+    font-size: 16px;
+    margin: 30px 60px;
+  }
+  .copy__btn {
+    font-size: 14px;
+  }
+  /*  */
+  .main__skills {
+    height: 100%;
+    padding: 24px 60px 32px 60px;
+  }
+  .main__skills p {
+    font-size: 14px;
+  }
+  .main__skills h4 {
+    font-size: 20px;
+  }
+  .skills__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0px;
+  }
+  .skills__item {
+    width: 100%;
+  }
+  .skills__item i {
+    font-size: 28px;
+    width: 56px;
+    height: 56px;
+  }
+  .item__title {
+    font-size: 16px;
+  }
+  /*  */
+  .main__service {
+    height: 100%;
+    padding: 24px 0 0 0;
+  }
+  .service__name {
+    font-size: 14px;
+  }
+  .service__title {
+    font-size: 20px;
+  }
+  .service__box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+  .service__imgOverlay h4 {
+    font-size: 24px;
+  }
+  .service__imgOverlay p {
+    font-size: 16px;
+  }
+  footer {
+    height: 100%;
+  }
+  .footer__links {
+    gap: 15px;
+  }
+  .footer__links a > i {
+    font-size: 28px;
+    width: 48px;
+    height: 48px;
+  }
+  .footer__name {
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .service__imgOverlay:hover {
+    border: 15px solid var(--color-neutral);
+  }
 }
