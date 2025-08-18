@@ -1,0 +1,357 @@
+/* font-size
+  font-size: 0.875rem; 14px
+  font-size: 1.125rem; 18px
+  font-size: 1.375rem; 22px
+  font-size: 1.5rem; 24px
+  font-size: 1.75rem; 28px
+
+ */
+:root {
+  --colour-primary: #fcfcfc;
+  --colour-accent: #6fbaf8;
+
+  --text-colour: #1a1a1a;
+
+  --line: #e1e8f0;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Roboto';
+}
+body {
+  margin: 0;
+  background-color: #f7f9fc;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+h3 {
+  font-size: 1.375rem;
+  margin: 0;
+}
+/*  */
+.btn {
+  font-size: 0.875rem;
+  color: var(--colour-primary);
+  background-color: var(--colour-accent);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.section {
+  background-color: var(--colour-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+/* header */
+.profile__container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colour-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin: 80px auto 0 auto;
+  padding: 40px 20px;
+}
+.profile__summary {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.summary__img {
+  width: 170px;
+  height: 150px;
+}
+.summary__info {
+  width: 100%;
+}
+.info__title {
+  font-size: 1.75rem;
+  margin: 0;
+}
+.info__job {
+  margin: 5px;
+}
+.info__location {
+  margin: 5px 5px 10px 5px;
+  color: var(--colour-accent);
+}
+.profile__details {
+  display: flex;
+  gap: 50px;
+  border-left: 2px solid var(--line);
+  padding: 10px 30px 10px 50px;
+}
+.details__item {
+  padding-bottom: 10px;
+}
+/*  */
+.tab {
+  width: 78%;
+  margin: 20px auto;
+  border-bottom: 3px solid var(--line);
+}
+.tab__label {
+  display: inline-block;
+  font-size: 1.125rem;
+  color: var(--colour-accent);
+  border-bottom: 3px solid var(--colour-accent);
+  margin: 0;
+  padding: 0 10px 6px 10px;
+  position: relative;
+  bottom: -3px;
+}
+/*  */
+.profile__main {
+  width: 80%;
+  display: flex;
+  gap: 20px;
+  margin: auto;
+}
+/*  */
+.main__work {
+  flex: 20%;
+  max-height: 350px;
+}
+.work__lists {
+  font-size: 0.875rem;
+  margin-top: 20px;
+}
+.work__item {
+  padding-bottom: 10px;
+}
+.main__box {
+  flex: 80%;
+}
+.about__des {
+  margin: 20px 0 100px 0;
+}
+.main__divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--line);
+  margin-bottom: 30px;
+}
+.skills__list {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0 180px 0;
+}
+.skills__item {
+  padding: 5px 20px;
+  border: 1.5px solid var(--line);
+  border-radius: 30px;
+}
+/*  */
+.main__sidebar {
+  flex: 20%;
+  text-align: center;
+}
+.social__icon {
+  font-size: 58px;
+  color: var(--colour-accent);
+}
+.social__title {
+  font-size: 0.875rem;
+}
+.social__link {
+  display: block;
+  color: var(--colour-accent);
+  margin-top: 6px;
+  font-size: 0.875rem;
+}
+.suggestion__title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 30px 0 6px 0;
+}
+.suggestion__divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--line);
+  margin: auto;
+}
+.suggestion__userbox {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: center;
+}
+.userImg {
+  width: 50px;
+  height: 50px;
+}
+.userContentBox {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.userName {
+  font-size: 0.82rem;
+  margin: 0;
+}
+.userRole,
+.userLocation {
+  font-size: 0.8rem;
+  margin: 3px 0 0 0;
+}
+.userLocation {
+  color: var(--colour-accent);
+}
+/*  */
+.profile__footer {
+  text-align: center;
+  margin: 80px 0 20px 0;
+}
+
+/*  */
+@media screen and (min-width: 1400px) {
+  .profile__container {
+    padding: 40px 60px;
+  }
+  .profile__summary {
+    gap: 40px;
+  }
+  .summary__img {
+    width: 230px;
+    height: 200px;
+  }
+  .info__title {
+    font-size: 2rem;
+  }
+  .info__job,
+  .info__location {
+    font-size: 1.125rem;
+    margin: 10px 0;
+  }
+  .info__contact {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .profile__details {
+    gap: 80px;
+    padding-left: 80px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .profile__main {
+    flex-direction: column;
+  }
+  .work__lists {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .about__des {
+    font-size: 1.125rem;
+    margin: 20px 20px 50px 20px;
+  }
+  .skills__list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .main__sidebar {
+    display: flex;
+    gap: 20px;
+  }
+  .sidebar__social {
+    width: 70%;
+  }
+  .social__title {
+    font-size: 1.125rem;
+  }
+  .social__link {
+    font-size: 1rem;
+    margin-top: 16px;
+  }
+  .sidebar__suggestion {
+    width: 30%;
+    background-color: var(--colour-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 30px 20px;
+  }
+  .suggestion__title {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  .userImg {
+    width: 70px;
+    height: 70px;
+  }
+  .userName {
+    font-size: 0.875rem;
+  }
+  .userRole,
+  .userLocation {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .profile__details {
+    border-left: none;
+    padding: 10px 30px;
+  }
+  .details__item {
+    padding-bottom: 10px;
+  }
+  /*  */
+  .profile__main {
+    flex-direction: column;
+    gap: 10px;
+  }
+  /*  */
+  .about__des {
+    margin: 20px 0 50px 0;
+  }
+  /*  */
+  .skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 10px 0;
+  }
+  .skills__item {
+    font-size: 0.875rem;
+  }
+  .main__sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .sidebar__social {
+    width: 50%;
+  }
+  .sidebar__suggestion {
+    width: 50%;
+    background-color: var(--colour-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 30px 20px;
+  }
+  .suggestion__title {
+    margin-top: 0;
+  }
+}

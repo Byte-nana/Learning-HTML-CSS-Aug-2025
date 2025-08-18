@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNS Profile</title>
+    <link rel="stylesheet" href="/project/2.SNS_Profile/style.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="profile__container">
+      <section class="profile__summary">
+        <img
+          class="summary__img"
+          src="/project/2.SNS_Profile/profile-pic.png"
+          alt="profile picture"
+        />
+        <div class="summary__info">
+          <h2 class="info__title">Killian Sven</h2>
+          <p class="info__job">front-end Designer</p>
+          <p class="info__location">
+            <i class="fa-solid fa-location-dot"></i> Mapo-gu, Seoul
+          </p>
+          <button class="btn info__contact">Contact</button>
+        </div>
+      </section>
+      <section class="profile__details">
+        <ul class="details__lists">
+          <li class="details__item">Location</li>
+          <li class="details__item">Age</li>
+          <li class="details__item">Experience</li>
+          <li class="details__item">School</li>
+        </ul>
+        <ul class="details__lists">
+          <li class="details__item">Mapo-gu, Seoul</li>
+          <li class="details__item">1990</li>
+          <li class="details__item">Junior-level</li>
+          <li class="details__item">school</li>
+        </ul>
+      </section>
+    </header>
+
+    <div class="tab">
+      <p class="tab__label">Profile</p>
+    </div>
+
+    <main class="profile__main">
+      <section class="section main__work">
+        <h3 class="work__title">WORKS</h3>
+        <ul class="work__lists">
+          <li class="work__item">Landing page design</li>
+          <li class="work__item">Flyer desgin</li>
+          <li class="work__item">Vue.js To-do app</li>
+          <li class="work__item">Shopping page design</li>
+        </ul>
+      </section>
+      <section class="section main__box">
+        <section class="main__about">
+          <h3 class="about__title">ABOUT</h3>
+          <p class="about__des">
+            I am a front-end designer who is excellent at Bootstrap, Sass
+            Foundation I have dealt lots of in-house design workds and outsource
+            things. If you want to check my protfolio, please visit
+            Killiansven.com
+          </p>
+        </section>
+        <div class="divider main__divider"></div>
+        <section class="main__skills">
+          <h3 class="skills__title">Skills</h3>
+          <ul class="skills__list">
+            <li class="skills__item">HTML5</li>
+            <li class="skills__item">JavaScript</li>
+            <li class="skills__item">CSS3</li>
+            <li class="skills__item">Illustrator</li>
+            <li class="skills__item">Photoshop</li>
+          </ul>
+        </section>
+      </section>
+
+      <aside class="main__sidebar">
+        <div class="section sidebar__social">
+          <i class="fa-solid fa-fire-flame-simple social__icon"></i>
+          <p class="social__title">Find me at Linkedout.com</p>
+          <button class="btn social__btn">Sign Up</button>
+          <a href="#" class="social__link">Already a member?</a>
+        </div>
+
+        <div class="sidebar__suggestion">
+          <p class="suggestion__title">People You Might Know</p>
+          <div class="divider suggestion__divider"></div>
+          <div class="suggestion__userbox">
+            <img
+              src="/project/2.SNS_Profile/profile-pic.png"
+              alt=""
+              class="userImg"
+            />
+            <div class="userContentBox">
+              <h6 class="userName">Jason Derulo</h6>
+              <p class="userRole">Developer</p>
+              <p class="userLocation">
+                <i class="fa-solid fa-location-dot"></i> Seoul
+              </p>
+            </div>
+          </div>
+          <div class="suggestion__userbox">
+            <img
+              src="/project/2.SNS_Profile/profile-pic.png"
+              alt=""
+              class="userImg"
+            />
+            <div class="userContentBox">
+              <h6 class="userName">Jason Derulo</h6>
+              <p class="userRole">Developer</p>
+              <p class="userLocation">
+                <i class="fa-solid fa-location-dot"></i> Seoul
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="profile__footer">
+      <p class="footer__Copyright">©NanaByte</p>
+    </footer>
+  </body>
+</html>
