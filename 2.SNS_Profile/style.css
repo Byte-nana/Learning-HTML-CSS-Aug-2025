@@ -304,17 +304,36 @@ h3 {
     font-size: 0.85rem;
   }
 }
-@media screen and (max-width: 576px) {
+
+@media screen and (max-width: 992px) {
   .profile__container {
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+  }
+  .profile__summary {
+    gap: 50px;
   }
   .profile__details {
     border-left: none;
     padding: 10px 30px;
+    gap: 100px;
   }
-  .details__item {
-    padding-bottom: 10px;
+  .lists__title {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile__container {
+    gap: 30px;
+  }
+  .profile__details {
+    gap: 50px;
+  }
+  .profile__summary {
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
   }
   /*  */
   .profile__main {
